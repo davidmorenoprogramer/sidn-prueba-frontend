@@ -1,0 +1,27 @@
+.card{
+
+   
+    width: 100%;
+    height: 300px;
+    display: grid;
+    text-align: center;
+    background-color : #FFF;
+	-webkit-box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.75);
+
+}
+.list{
+
+    display: grid;
+    padding: 10px;
+
+}
+
+.title{
+
+    font-size : 6rem;
+	color : #C3C3C3;
+
+
+}
