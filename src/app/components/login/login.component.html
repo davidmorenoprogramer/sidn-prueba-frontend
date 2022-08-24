@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<h3>correo de prueba: david@gmail.com y pass:12345678</h3>
+<div>
+	<p>{{Errors}}</p>
+</div>
+<br><br>
+<form [formGroup]="RegisterForm" (ngSubmit)="LoginEnviado()">
+	<br><br>
+	<input type="email" name="email" placeholder="Email" formControlName="email" [(ngModel)]="email">
+	<br><br>
+	<input type="text" name="password" placeholder="Password" formControlName="password" [(ngModel)]="password">
+	<br><br>
+	<button type="submit">Enviar</button>
+</form>
+
+
+

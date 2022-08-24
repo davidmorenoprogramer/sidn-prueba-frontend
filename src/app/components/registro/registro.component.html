@@ -1,0 +1,18 @@
+<h1>Registrar Usuario</h1>
+
+<div *ngFor="let error of Errors; let i = index">
+	<p>{{error}}</p>
+</div>
+<br><br>
+<form [formGroup]="RegisterForm" (ngSubmit)="formularioEnviado()">
+	<input type="text" name="name" placeholder="Nombre de Usuario" formControlName="name" [(ngModel)]="User.name">
+	<br><br>
+	<input type="email" name="email" placeholder="Email" formControlName="email" [(ngModel)]="User.email">
+	<br><br>
+	<input type="text" name="password" placeholder="Password" formControlName="password" [(ngModel)]="User.password">
+	<br><br>
+	<button type="submit">Enviar</button>
+</form>
+
+
+

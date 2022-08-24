@@ -2,6 +2,7 @@ import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilmsService } from 'src/app/services/films.service';
+import { ApiBdFilmsService } from 'src/app/services/api-bd-films.service';
 
 @Component({
   selector: 'app-cards',
@@ -11,7 +12,7 @@ import { FilmsService } from 'src/app/services/films.service';
 export class CardsComponent implements OnInit {
 
   films: any[] = [];
-  constructor(private filmservice: FilmsService, private router: Router) { }
+  constructor(private filmservice: FilmsService, private router: Router,private apiservice:ApiBdFilmsService) { }
 
   ngOnInit(): void {
     this.GetFilms();
@@ -22,7 +23,12 @@ export class CardsComponent implements OnInit {
     this.router.navigateByUrl(`info/${id}`);
 
   }
- 
+  
+  Setfilmfavorite(){
+    this.apiservice.SetFavoriteFilm({ruta:"nuevapelifav"}).subscribe();
+
+  }
+
   GetFilms(){
     
     this.filmservice.get_allfilms().subscribe((data:any)=>{
